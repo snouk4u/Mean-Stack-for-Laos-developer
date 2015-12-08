@@ -13,14 +13,11 @@ html
 				a(href='/signup') ສະໝັກສຳມະຊິກ
 			div
 				a(href='/login') ເຂົ້າລະບົບ
-		div#mainApp(ng-controller='NameController', ng-strict-di)
-			div
-				label(for='yourName') Your name is
-				input(name='yourName', type='text', ng-model='yourName')
-			div
-				|{{ yourName | sayhello }}
-
-		img(src='/img/test.jpg', width='100%', alt='Test')
+		div#mainApp(ng-include="'/modules/hello/views/hello.client.view.jade'")
+					
 
 	script(type='text/javascript', src='/lib/angular/angular.min.js')
+	script(type='text/javascript', src='/modules/hello/hello.client.module.js')
+	script(type='text/javascript', src='/modules/hello/controllers/hello.client.controller.js')
+	script(type='text/javascript', src='/modules/hello/filters/hello.client.filter.js')
 	script(type='text/javascript', src='/application.js')
