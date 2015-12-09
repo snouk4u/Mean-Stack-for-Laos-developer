@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>test</title>
+	
+</head>
+<body id="mainApp">
+
+
+<a ui-sref="/signup">ສະໝັກສຳມະຊິກ</a>
+<a ui-sref="/login">ເຂົ້າລະບົບ</a>
+<div ui-view></div>
+
+</body>
+<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script type="text/javascript" src="modules/core/core.client.module.js"></script>
+<script type="text/javascript" src="modules/core/config/core.client.routes.js"></script>
+
+<script type="text/javascript" src="modules/users/users.client.module.js"></script>
+<script type="text/javascript" src="modules/users/config/users.client.routes.js"></script>
+
+<!--<script type="text/javascript" src="modules/hello/hello.client.module.js"></script>
+<script type="text/javascript" src="modules/hello/config/hello.client.routes.js"></script>
+<script type="text/javascript" src="modules/hello/controllers/hello.client.controller.js"></script>
+<script type="text/javascript" src="modules/hello/filters/hello.client.filter.js"></script>
+-->
+<script type="text/javascript" src="application.js"></script>
+</html>

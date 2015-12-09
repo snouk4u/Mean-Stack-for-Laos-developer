@@ -1,0 +1,16 @@
+h2 Long in
+form(name='loginForm', ng-controller='AuthController', ng-submit='login(loginForm.$valid)', novalidate)
+	div
+		label(for='username') ຊື່
+		input(name='username', type='text', placeholder='ຊື່', ng-model='user.username', required)
+	div
+		label(for='password') ລະຫັດຜ່ານ
+		input(name='password', type='password', placeholder='ລະຫັດຜ່ານ', ng-model='user.password', required)
+	div
+		input(type='submit', value='ລົງຊື່', ng-disbled='loginForm.$invalid')
+		div(ng-show='error')
+			strong(ng-bind='error')
+div
+	a(href='/oauth/facebook') ເຂົ້າລະບົບດ້ວຍ Facebook
+div
+	a(href='/oauth/google') ເຂົ້າລະບົບດ້ວຍ Google

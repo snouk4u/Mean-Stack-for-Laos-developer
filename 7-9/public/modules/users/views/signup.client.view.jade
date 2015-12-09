@@ -1,0 +1,27 @@
+h2 ສະໝັກສຳມະຊິກ
+form(name='signupForm', ng-controller='AuthController', ng-submit='signup(signupForm.$valid)', novalidate)
+	div
+		label(for='username') ຊື່
+		input(name='username', type='text', placeholder='ຊື່', ng-model='user.username',ng-maxlength='10', required)
+	div
+		label(for='firstname') ຊື່ແທ້
+		input(name='firstname', type='text', placeholder='ຊື່ແທ້', ng-model='user.firstname', required)
+	div
+		label(for='lastname') ນາມສະກຸນ
+		input(name='lastname', type='text', placeholder='ນາມສະກຸນ', ng-model='user.lastname', required)
+	div
+		label(for='email') ອີແມວ
+		input(name='email', type='email', placeholder='ໃສ່ທີ່ຢູ່ອີແມວຂອງທ່ານ', ng-model='user.email', required)
+		p(ng-show='signupForm.email.$touched && signupForm.email.$error.required') ຕ້ອງໃສ່ທີ່ຢູ່ ອີແມວ
+		p(ng-show='signupForm.email.$dirty && signupForm.email.$error.email') ອີແມວ ທີ່ບໍ່ຖືກຕ້ອງ
+	div
+		label(for='password') ລະຫັດຜ່ານ
+		input(name='password', type='password', placeholder='ລະຫັດຜ່ານ', ng-model='user.password', ng-minlength='6')
+	div
+		input(type='submit', value='ສະໝັກສຳມະຊິກ', ng-disbled='signupForm.$invalid')
+		div(ng-show='error')
+			strong(ng-bind='error')
+div
+	a(href='/oauth/facebook') ເຂົ້າລະບົບດ້ວຍ Facebook
+div
+	a(href='/oauth/google') ເຂົ້າລະບົບດ້ວຍ Google

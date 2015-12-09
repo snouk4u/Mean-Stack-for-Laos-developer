@@ -1,0 +1,20 @@
+html
+	head
+		title= title
+		link(href='/css/main.css', rel='stylesheet')
+	body#mainApp
+		header(ng-include="'/modules/core/views/header.client.view.jade'")
+		div(ui-view='')
+					
+
+	script(type='text/javascript', src='/lib/angular/angular.min.js')
+	script(type='text/javascript', src='/lib/angular-ui-router/release/angular-ui-router.min.js')
+
+	script(type='text/javascript', src='/modules/core/core.client.module.js')
+	script(type='text/javascript', src='/modules/core/config/core.client.routes.js')
+
+	script(type='text/javascript', src='/modules/users/users.client.module.js')
+	script(type='text/javascript', src='/modules/users/config/users.client.routes.js')
+	script(type='text/javascript', src='/modules/users/controllers/auth.client.controller.js')
+	
+	script(type='text/javascript', src='/application.js')

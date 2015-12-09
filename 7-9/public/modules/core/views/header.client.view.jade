@@ -1,0 +1,12 @@
+div(ng-controller='HeaderController')
+	div(ng-if='auth.user')
+		h2 ສະບາຍດີ
+			span(ng-bind='auth.user.username')
+		div
+			form(name='logout', method='POST', action='logout')
+				input(type='submit', value='ອອກ')
+	div(ng-if='!auth.user')		
+		div
+			a(ui-sref='signup') ສະໝັກສຳມະຊິກ
+		div
+			a(ui-sref='login') ເຂົ້າລະບົບ
